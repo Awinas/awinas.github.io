@@ -65,18 +65,27 @@
             font-size: 0.9em;
         }
 
-        /* Music Icon */
-        .music-icon {
-            width: 50px;
-            height: 50px;
-            margin-top: 10px;
+        /* Button Style */
+        .play-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
+        .play-button:hover {
+            background-color: #ff4c4c;
+        }
     </style>
 </head>
 <body>
     <!-- Background Music -->
-    <audio autoplay loop>
+    <audio id="background-music" loop>
         <source src="https://awinas.github.io/cat_hbd.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
@@ -90,6 +99,9 @@
         <p class="cake">🍰 Jom nanti kita makan kek lagi! 🍰</p>
         <p class="footer">Terima kasih sekali lagi, Kak Aznor. Semoga kakak terus diberkati dan bahagia selalu! ✨</p>
         <p class="footer">Daripada: <strong>Fakhrul yang hensem dan macho</strong> 😎</p>
+        
+        <!-- Play Music Button -->
+        <button class="play-button" onclick="document.getElementById('background-music').play()">Play Music</button>
     </div>
 </body>
 </html>
